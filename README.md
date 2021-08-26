@@ -1,4 +1,5 @@
 # JavaScript 자바스크립트 이론
+2021.08.25
 ### :star2:변수
 ```
 let value = 1; 
@@ -43,4 +44,32 @@ let good = null;
 let something = undefined; 
 //ex) let criminal;
       console.log(criminal);
+```
+---
+2021.08.26
+### :star2:대입연산자
+```
+let value = 1;
+
+let a = 1;
+a += 1; // a에 1을 더하겠다
+a -= 3;
+a *= 3;
+console.log(a);
+```
+
+### :star2:산술연산자
+```
+let a = 1 + 2 - (3 * 4) / 4 ;
+console.log(a);
+```
+```
+let a = 1;
+console.loa(a++);  값 : 1 // 보여준 다음에 계산을 하느냐
+console.log(a); 값: 2
+console.log(++a); 값: 3 // 미리 계산을 하고 보여주느냐
+
+let a = 1;
+console.loa(a--);  값 : 1
+console.log(a); 값: 0
 ```

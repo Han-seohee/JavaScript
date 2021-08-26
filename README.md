@@ -65,11 +65,11 @@ console.log(a);
 ```
 ```
 let a = 1;
-console.loa(a++);  값 : 1 // 보여준 다음에 계산을 하느냐
-console.log(a); 값: 2
-console.log(++a); 값: 3 // 미리 계산을 하고 보여주느냐
+console.loa(a++); // 값: 1 (보여준 다음에 계산을 하느냐)
+console.log(a); // 값: 2
+console.log(++a); // 값: 3 (미리 계산을 하고 보여주느냐)
 
 let a = 1;
-console.loa(a--);  값 : 1
-console.log(a); 값: 0
+console.loa(a--); //값 : 1
+console.log(a); //값: 0
 ```

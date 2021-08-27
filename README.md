@@ -73,3 +73,42 @@ let a = 1;
 console.loa(a--); //값 : 1
 console.log(a); //값: 0
 ```
+---
+2021.08.27
+### :star2:논리연산자
+Boolean을 처리하기 위한 연산자
+
+1. NOT 연산자 !
+```
+const a = !true; // 값: false
+const a = !false; // 값: true
+console.log(a);
+```
+
+2. AND 연산자 &&
+```
+const a = true && true; // 값: true 양쪽이 모두 true일 때만 true
+const a = false && true; // 값: false
+const a = true && false; // 값: false
+const a = false && false; // 값: false
+console.log(a);
+```
+
+3. OR 연산자 ||
+```
+const a = true || true; // 값: true
+const a = false || true; // 값: true
+const a = true || false; // 값: true
+const a = false || false; // 값: false 양쪽이 모두 false일 때만 false
+console.log(a); 
+```
+
+> NOT > AND > OR 순서
+```
+const value = !(true && false || true && false || !false);
+// !(true && false || true && false || true)
+// !(false || false || true)
+// !(true)
+// false
+console.log(value); //값: false
+```

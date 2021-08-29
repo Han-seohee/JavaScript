@@ -212,3 +212,78 @@ if (a === 5) {
 }
 // 값 : 5도 아니고 10도 아닙니다.
 ```
+---
+### :star2:조건문
+>switch case
+```
+const device = 'iphone';
+
+switch (device) {
+ case 'iphone';
+  console.log('아이폰!');
+  break; // 비교가 끝났다는 표시, 브레이크를 안하면 다음 코드까지 실행
+ case 'ipad':
+  console.log('아이패드!');
+  break;
+ case 'galaxy note';
+  console.log('갤럭시 노트!');
+  break;
+ default; // 아무것도 해당되지 않는경우
+  console.log('모르겠네요..');
+}
+// 값 : 아이폰!
+```
+```
+const device = 'ipad';
+
+switch (device) {
+ case 'iphone';
+  console.log('아이폰!');
+  break;
+ case 'ipad':
+  console.log('아이패드!');
+  break;
+ case 'galaxy note';
+  console.log('갤럭시 노트!');
+  break;
+ default;
+  console.log('모르겠네요..');
+}
+// 값 : 아이패드!
+```
+```
+const device = 'galaxy note';
+
+switch (device) {
+ case 'iphone';
+  console.log('아이폰!');
+  break;
+ case 'ipad':
+  console.log('아이패드!');
+  break;
+ case 'galaxy note';
+  console.log('갤럭시 노트!');
+  break;
+ default;
+  console.log('모르겠네요..');
+}
+// 값 : 갤럭시 노트!
+```
+```
+const device = 'macbook';
+
+switch (device) {
+ case 'iphone';
+  console.log('아이폰!');
+  break;
+ case 'ipad':
+  console.log('아이패드!');
+  break;
+ case 'galaxy note';
+  console.log('갤럭시 노트!');
+  break;
+ default;
+  console.log('모르겠네요..');
+}
+// 값 : 모르겠네요..
+```

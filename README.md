@@ -287,3 +287,34 @@ switch (device) {
 }
 // 값 : 모르겠네요..
 ```
+---
+### :star2:함수
+<img src="https://user-images.githubusercontent.com/86407453/131250079-f94e3c85-a01d-496a-83dc-0cee3a2bde2b.PNG">
+
+```
+const a = 1;
+const b = 2;
+const sum = a + b;
+```
+
+함수로 변경:point_down:
+
+```
+function add(a, b) {       // (파라미터 : 함수에서 받아오는 값)
+ return a + b;
+} // add라는 함수를 만든 것
+
+const sum = add(1, 2);
+console.log(sum);
+// 값 : 3
+```
+<img src="https://user-images.githubusercontent.com/86407453/131250118-a0335a9c-09f3-410d-bfe6-9ff0e24f3878.PNG">
+
+```
+function hello(name) {
+ console.log('Hello, ' + name + '!');
+}
+
+hello('seohee');
+// 값 : Hello, seohee!
+```

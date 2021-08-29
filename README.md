@@ -164,3 +164,51 @@ const b = '하세요';
 console.log(a + b);
 // 값 : 안녕하세요
 ```
+---
+### :star2:조건문
+
+>if
+```
+const a = 1;
+if (a + 1 === 2) {
+ console.log('a + 1 이 2 입니다.');
+ console.log('blabla'); // 여러줄 가능
+}
+
+const a = 1; // 다른 블록에 있기 때문에 똑같은 이름으로 선언 가능
+if (a + 1 === 2) {
+ const a = 2; // 다른 블록에 있기 때문에 똑같은 이름으로 선언 가능
+ console.log('if문 안의 a 값은 ' + a);
+}
+console.log('if문 밖의 a 값은 ' + a);
+
+// 값 : if 문 안의 a 값은 2
+   값 : if 문 밖의 a  값은 1
+
+//(var을 쓰게 되면 값이 같아짐 - 권장하지 않음)
+```
+
+>if else
+```
+const a = 10;
+if (a > 15) {
+ console.log('a가 15보다 큽니다.');
+} else {
+ console.log('a가 15보다 크지 않습니다.');
+}
+//값 : a가 15보다 크지 않습니다.
+```
+
+>if else if
+```
+const a = 7;
+
+if (a === 5) {
+ console.log('5 입니다!');
+} else if (a === 10) {        // else if 는 여러개 사용 가능
+ console.log('10 입니다!');
+} else {
+ console.log('5도 아니고 10도 아닙니다.');
+}
+// 값 : 5도 아니고 10도 아닙니다.
+```

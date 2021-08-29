@@ -112,3 +112,55 @@ const value = !(true && false || true && false || !false);
 // false
 console.log(value); //값: false
 ```
+---
+2021.08.29
+### :star2:비교연산자
+두 값을 비교 할 때 쓰는 연산자
+
+>equals
+```
+const a = 1;
+const b = 1;
+const equals = a === b; 
+console.log(equals);
+// 값 : true
+
+const a = 1;
+const b = 2;
+const equals = a === b;
+console.log(equals);
+// 값 : false
+
+// Use 'equals' three times to compare the two values.
+// (equals 사인을 두번 입력하면 타입을 검사하지 않기 때문에 세개를 쓸것을 권장함)
+```
+
+>notEquals
+```
+const a = 1;
+const b = '1';
+const notEquals = a !== b; 
+console.log(notEquals);
+// 값 : true
+```
+
+>크고 작음을 비교
+```
+const a = 10;
+const b = 15;
+const c = 15;
+
+console.log(a < b); //값 : true
+console.log(a > b); //값 : true
+console.log(b >= a); //값 : true
+console.log(a <= c); //값 : true
+console.log(b < c); //값 : false
+```
+
+### :star2:문자열 붙이기
+```
+const a = '안녕';
+const b = '하세요';
+console.log(a + b);
+// 값 : 안녕하세요
+```

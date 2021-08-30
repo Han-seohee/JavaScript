@@ -392,3 +392,36 @@ const grade = getGrade(30);
 console.log(grade);
 // 값 : F
 ```
+---
+### :star2:화살표 함수
+```
+const add = (a, b) => {
+ return a + b;
+}
+
+const sum = add(1, 2);
+console.log(sum);
+
+// 값 : 3
+```
+
+```
+const add = (a, b) => a + b;
+
+const hello = (name) => {
+ console.log(`Hello, ${name}!`);
+}
+
+hello('seohee');
+
+// 값 : Hello, seohee!
+```
+
+```
+const add = (a, b) => a + b;
+
+const sum = add(1, 2);
+console.log(sum);
+
+// 값 : 3
+```

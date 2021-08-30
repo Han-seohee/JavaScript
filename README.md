@@ -318,3 +318,77 @@ function hello(name) {
 hello('seohee');
 // 값 : Hello, seohee!
 ```
+---
+2021.08.30
+### :star2:함수 Template Literal
+
+```
+function hello(name) {
+ console.log(`Hello ${name}!`);
+}
+
+hello('seohee');
+// 값 : Hello seohee!
+```
+
+```
+function hello(name) {
+ return `Hello ${name}!`;    //return이 사용되는 순간 함수는 종료됨
+}
+
+const result = hello('seohee');
+console.log(result);
+// 값 : Hello seohee!
+```
+---
+>함수 연습
+```
+function getGrade(score) {
+ if (score === 100) {
+  return 'A+';
+ } else if (score >= 90) {
+   return 'A'; 
+ } else if (score === 89) {
+   return 'B+';
+ } else if (score >= 80) {
+   return 'B';
+ } else if (score === 79) {
+   return 'C+';
+ } else if (score >= 70) {
+   return 'C';
+ } else if (score === 69) {
+   return 'D+';
+ } else if (score >= 60) {
+   return 'D';
+ } else {
+   return 'F';
+ }
+}
+const grade = getGrade(100);
+console.log(grade);
+// 값 : A+
+
+const grade = getGrade(95);
+console.log(grade);
+// 값 : A
+
+const grade = getGrade(89);
+console.log(grade);
+// 값 : B+
+
+const grade = getGrade(83);
+console.log(grade);
+// 값 : B
+
+const grade = getGrade(70);
+console.log(grade);
+// 값 : C
+
+const grade = getGrade(69);
+console.log(grade);
+// 값 : D+
+
+const grade = getGrade(30);
+console.log(grade);
+// 값 : F
+```

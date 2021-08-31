@@ -599,3 +599,45 @@ print(captainAmerica);
         아이언맨(토니 스타크) 역할을 맡은 배우는 로버트 다우니 주니어 입니다.
         캡틴 아메리카(스티븐 로저스) 역할을 맡은 배우는 크리스 에반스 입니다.
 ```
+---
+:star2:객체 - 객체 안에 함수 넣기
+
+```
+const dog = {
+ name: '멍멍이',
+ sound: '멍멍!',
+ say: function say() {        //say, function say 생략 가능. 화살표 함수는 작동X
+  console.log(this.sound);
+ }
+};
+
+dog.say();
+
+// 값 : 멍멍!
+```
+
+```
+const dog = {
+ name: '멍멍이',
+ sound: '멍멍!',
+ say: function say() {        //say, function say 생략 가능. 화살표 함수는 작동X
+  console.log(this.sound);
+ }
+};
+
+const cat = {
+ name: '야옹이',
+ sound: '야옹~'
+};
+
+cat.say = dog.say;
+dog.say();
+cat.say();
+
+const catSay = cat.say;   //함수를 꺼내면 this와의 관계가 사라짐
+cat.Say();
+
+// 값 : 멍멍!
+        야옹~
+        Error in ...
+```

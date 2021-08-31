@@ -507,7 +507,7 @@ const captainAmerica = {
 };
 
 function print(hero) {
- const text = `(${hero.name}) 역할을 맡은 배우는 ${hero.actor} 입니다.`;
+ const text = `${hero.alias}(${hero.name}) 역할을 맡은 배우는 ${hero.actor} 입니다.`;
  console.log(text);
 }
 
@@ -515,5 +515,87 @@ print(ironMan);
 print(captainAmerica);
 
 // 값 : 아이언맨(토니 스타크) 역할을 맡은 배우는 로버트 다우니 주니어 입니다.
+        캡틴 아메리카(스티븐 로저스) 역할을 맡은 배우는 크리스 에반스 입니다.
+```
+---
+### :star2:객체 - 비구조화 할당 (객체 구조 분해)
+
+```
+const ironMan = {
+ name: '토니 스타크',
+ actor: '로버트 다우니 주니어',
+ alias: '아이언맨'
+};
+
+const captainAmerica = {
+ name: '스티븐 로저스',
+ actor: '크리스 에반스',
+ alias: '캡틴 아메리카'
+};
+
+function print(hero) {
+ const { alias, name, actor } = hero;
+ const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
+ console.log(text);
+}
+
+print(ironMan);
+print(captainAmerica);
+
+// 값 : 아이언맨(토니 스타크) 역할을 맡은 배우는 로버트 다우니 주니어 입니다.
+        캡틴 아메리카(스티븐 로저스) 역할을 맡은 배우는 크리스 에반스 입니다.
+```
+
+```
+const ironMan = {
+ name: '토니 스타크',
+ actor: '로버트 다우니 주니어',
+ alias: '아이언맨'
+};
+
+const captainAmerica = {
+ name: '스티븐 로저스',
+ actor: '크리스 에반스',
+ alias: '캡틴 아메리카'
+};
+
+function print({ alias, name, actor }) {
+ const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
+ console.log(text);
+}
+
+print(ironMan);
+print(captainAmerica);
+
+// 값 : 아이언맨(토니 스타크) 역할을 맡은 배우는 로버트 다우니 주니어 입니다.
+        캡틴 아메리카(스티븐 로저스) 역할을 맡은 배우는 크리스 에반스 입니다.
+```
+
+```
+const ironMan = {
+ name: '토니 스타크',
+ actor: '로버트 다우니 주니어',
+ alias: '아이언맨'
+};
+
+const { name } = ironMan;
+console.log(name);
+
+const captainAmerica = {
+ name: '스티븐 로저스',
+ actor: '크리스 에반스',
+ alias: '캡틴 아메리카'
+};
+
+function print({ alias, name, actor }) {
+ const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
+ console.log(text);
+}
+
+print(ironMan);
+print(captainAmerica);
+
+// 값 : 토니스타크
+        아이언맨(토니 스타크) 역할을 맡은 배우는 로버트 다우니 주니어 입니다.
         캡틴 아메리카(스티븐 로저스) 역할을 맡은 배우는 크리스 에반스 입니다.
 ```

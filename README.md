@@ -641,3 +641,103 @@ cat.Say();
         야옹~
         Error in ...
 ```
+---
+### :star2:객체 - Getter 와 Setter 함수
+
+>Getter (특정 값을 조회 할 때 마다)
+
+```
+const numbers = {
+ a: 1,
+ b: 2
+};
+
+numbers.a = 5;
+console.log(numbers);
+
+// 값 : Object {a: 5, b: 2}
+```
+
+:point_down:
+
+```
+const numbers = {
+ a: 1,
+ b: 2
+  get sum() {
+   console.log('sum 함수가 실행됩니다!');
+   return this.a + this.b;
+ }
+};
+
+console.log(number.sum);
+numbers.b = 5;
+console.log(numbers.sum);
+
+// 값 : sum 함수가 실행됩니다!
+        3
+        sum 함수가 실행됩니다!
+        6
+```
+
+>Setter (특정 값을 설정 할 때 마다)
+
+```
+const dog = {
+  _name: '멍멍이',
+  set name(value) {
+    console.log('이름이 바귑니다..' + value);
+    this._name = value;
+  }
+};
+
+console.log(dog._name);
+dog.name = '뭉뭉이';
+console.log(dog._name);
+
+// 값 : 멍멍이
+         이름이 바뀝니다..뭉뭉이
+         뭉뭉이 
+```
+
+```
+const numbers = {
+  _a: 1,
+  _b : 2,
+  sum: 3,
+  calculate() {
+    console.log('calculate');
+    this.sum = this._a + this._b;
+  },
+  get a() {
+    return this._a;
+  },
+  get b() {
+    return this._b;
+  },
+  set a(value) {
+    this._a = value;
+    this.calculate();
+  },
+  set b(value) {
+    this._b = value;
+    this.calculate();
+  }
+};
+
+console.log(numbers.sum);
+numbers.a = 5;
+numbers.b = 7;
+numbers.a = 9;
+console.log(numbers.sum);
+console.log(numbers.sum);
+console.log(numbers.sum);
+
+// 값 : 3
+        calculate
+        calculate
+        calculate
+        16
+        16
+        16
+```
